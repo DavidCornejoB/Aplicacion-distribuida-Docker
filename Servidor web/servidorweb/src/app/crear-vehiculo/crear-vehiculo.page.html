@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Crear Vehículo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form (ngSubmit)="alertaGuardarVehiculo()">
+
+    <div id="container">
+      <ion-item>
+        <ion-label position="floating">Matricula</ion-label>
+        <ion-input type="text"
+                    name="matricula"
+                    [(ngModel)]="vehiculo.matricula"
+                    required></ion-input>
+      </ion-item>
+    </div>
+
+    <div id="container">
+      <ion-item>
+        <ion-label position="floating">Marca</ion-label>
+        <ion-input type="text"
+                    name="marca"
+                    [(ngModel)]="vehiculo.marca"
+                    required></ion-input>
+      </ion-item>
+    </div>
+    
+    <div id="container">
+      <ion-item>
+        <ion-label position="floating">Modelo</ion-label>
+        <ion-input type="text"
+                    name="modelo"
+                    [(ngModel)]="vehiculo.modelo"
+                    required></ion-input>
+      </ion-item>
+    </div>
+    
+    <div id="container">
+      <ion-item>
+        <ion-label position="floating">Color</ion-label>
+        <ion-input type="text"
+                    name="color"
+                    [(ngModel)]="vehiculo.color"
+                    required></ion-input>
+      </ion-item>
+    </div>
+    
+    <ion-grid>
+      <ion-row>
+        <ion-col sizeLg="3" sizeMg="4" sizeXs="6">
+            <button ion-button  type="submit" class="btn">Guardar Vehículo</button>
+        </ion-col>
+        <ion-col sizeLg="3" sizeMg="4" sizeXs="6">
+            <button ion-button [routerLink]="['../home']" class="btn">Cancelar</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </form>
+
+</ion-content>

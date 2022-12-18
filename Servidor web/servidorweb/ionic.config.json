@@ -1,0 +1,7 @@
+{
+  "name": "servidorweb",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

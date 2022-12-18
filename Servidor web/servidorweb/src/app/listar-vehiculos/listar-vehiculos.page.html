@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Listar Vehículos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div id="lista">
+    <ion-list>
+      <ion-list-header> LISTA DE VEHICULOS INGRESADOS </ion-list-header>
+
+      <ion-item *ngFor="let vehiculo of searchedCar">
+        <ion-label>
+          <h2 class="colorBlue">{{vehiculo.marca}} {{vehiculo.modelo}}</h2>
+          <p>Matrícula: {{vehiculo.matricula}}</p>
+          <p>Color: {{vehiculo.color}}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeLg="3" sizeMg="4" sizeXs="6">
+          <button ion-button [routerLink]="['../home']" class="btn">Volver</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+
