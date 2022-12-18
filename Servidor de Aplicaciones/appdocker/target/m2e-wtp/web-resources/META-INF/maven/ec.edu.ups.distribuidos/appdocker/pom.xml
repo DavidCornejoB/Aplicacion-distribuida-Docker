@@ -263,7 +263,7 @@
                                     <tags>
                                         <tag>latest</tag>
                                     </tags>
-                                    <contextDir>${project.basedir}/src/main/docker/front</contextDir>
+                                    <contextDir>${project.basedir}/src/main/docker/frontend</contextDir>
                                     <assembly>
                                         <mode>dir</mode>
                                         <name>maven/</name>

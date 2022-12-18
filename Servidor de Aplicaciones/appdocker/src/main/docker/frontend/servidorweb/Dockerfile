@@ -1,9 +1,13 @@
 FROM node:16.13 as build
 WORKDIR /app
 COPY package.json /app/
+
 RUN npm install -g ionic
 RUN npm install
+RUN npm install -g axios --save
+
 COPY ./ /app/
+
 RUN npm run build --prod
 
 FROM nginx:alpine
