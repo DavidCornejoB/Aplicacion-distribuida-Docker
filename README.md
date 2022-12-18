@@ -1,4 +1,4 @@
-# Docker-aplicacion-distribuida
+# Aplicación Distribuida y Dockerizada
  **Descripción General:**
  
 Servidor de base de datos PostgreSQL + PgAdmin.
