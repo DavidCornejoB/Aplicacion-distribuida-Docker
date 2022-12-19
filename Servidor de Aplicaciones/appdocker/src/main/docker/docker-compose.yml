@@ -1,6 +1,20 @@
 version: '3.6'
 
 services:
+
+  frontend:
+    image: frontend
+    container_name: frontend
+    hostname: frontend
+    environment:
+      TZ: America/Guayaquil
+    ports:
+    - 8100:8100
+    networks:
+      - datalogger_net
+    depends_on:
+      - srvwildfly
+      
   srvdb:
     image: postgres
     container_name: srvdb
