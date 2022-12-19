@@ -1,0 +1,7 @@
+ec\edu\ups\distribuidos\appdocker\Jsf23Activator.class
+ec\edu\ups\distribuidos\modelo\Vehiculo.class
+ec\edu\ups\distribuidos\appdocker\Service.class
+ec\edu\ups\distribuidos\ejb\AbstractFacade.class
+ec\edu\ups\distribuidos\ejb\VehiculoFacade.class
+ec\edu\ups\distribuidos\appdocker\ApplictaionPathActivator.class
+ec\edu\ups\distribuidos\util\CORSFilter.class

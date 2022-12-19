@@ -19,7 +19,7 @@ services:
 
 
   srvwildfly:
-    image: ups/demoappdocker
+    image: ups/appdocker
     container_name: srvwildfly
     hostname: srvwildfly
     environment:
@@ -54,7 +54,7 @@ volumes:
     driver_opts:
       o: bind
       type: none
-      device: /Users/cristiantimbi/datapg
+      device: F:/Archivos David/Documentos/Universidad/10mo Ciclo/Sistemas Distribuidos/Práctica - Docker 1/volumen
 
 networks:
   datalogger_net:
