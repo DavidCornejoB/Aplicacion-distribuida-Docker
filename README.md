@@ -152,6 +152,36 @@ $ ionic serve --external
 
 ### Dockerización:
 
+#### Dockerfile del Servidor de Aplicaciones:
+![Dockerfile backend](https://github.com/DavidCornejoB/Aplicacion-distribuida-Docker/blob/main/capturas/dockerfile%20backend.PNG)
+
+#### Dockerfile del Servidor Web:
+![Dockerfile frontend](https://github.com/DavidCornejoB/Aplicacion-distribuida-Docker/blob/main/capturas/dockerfile%20frontend.PNG)
+
+#### Docker-compose:
+
+- Servidor Web:
+
+![Docker-compose frontend](https://github.com/DavidCornejoB/Aplicacion-distribuida-Docker/blob/main/capturas/docker-compose%20frontend.PNG)
+
+- Servidor de Aplicaciones:
+
+![Docker-compose backend](https://github.com/DavidCornejoB/Aplicacion-distribuida-Docker/blob/main/capturas/docker-compose%20backend.PNG)
+
+- Servidor de Base de Datos:
+
+![Docker-compose bd](https://github.com/DavidCornejoB/Aplicacion-distribuida-Docker/blob/main/capturas/docker-compose%20base%20de%20datos.PNG)
+
+- Servicio PgAdmin:
+
+![Docker-compose pgadmin](https://github.com/DavidCornejoB/Aplicacion-distribuida-Docker/blob/main/capturas/docker-compose%20pgadmin.PNG)
+
+- Volúmen: Se ha creado un volúmen para el servidor de base de datos. Cada que el servidor de base de datos se detiene, todos sus datos son eliminados, por lo tanto, tenemos que hacer un respaldo mediante un volúmen que comparta los datos de la base de datos en una ubicación de la máquina anfitriona:
+
+![Docker-compose volume](https://github.com/DavidCornejoB/Aplicacion-distribuida-Docker/blob/main/capturas/docker-compose%20volumen.PNG)
+
+
+
 
 ### Información Adicional:
 
