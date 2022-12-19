@@ -61,35 +61,6 @@ Versión de Servidor Wildfly: wildfly-24.0.1.Final
                                     </ports>
                                 </run>
                             </image>
-                            <image>
-                                <name>frontend</name>
-                                <alias>frontend</alias>
-                                <build>
-                                    <tags>
-                                        <tag>latest</tag>
-                                    </tags>
-                                    <contextDir>${project.basedir}/src/main/docker/front</contextDir>
-                                    <assembly>
-                                        <mode>dir</mode>
-                                        <name>maven/</name>
-                                        <inline>
-                                            <files>
-                                                <file>
-                                                    <source>
-                                                        ${project.build.directory}/${project.build.finalName}.${project.packaging}
-                                                    </source>
-                                                    <outputDirectory>.</outputDirectory>
-                                                </file>
-                                            </files>
-                                        </inline>
-                                    </assembly>
-                                </build>
-                                <run>
-                                    <ports>
-                                        <port>4200:4200</port>
-                                    </ports>
-                                </run>
-                            </image>
                         </images>
                     </configuration>
                 </plugin>
