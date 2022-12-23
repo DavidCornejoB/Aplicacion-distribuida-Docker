@@ -1,20 +1,7 @@
 version: '3.6'
 
 services:
-
-  frontend:
-    image: frontend
-    container_name: frontend
-    hostname: frontend
-    environment:
-      TZ: America/Guayaquil
-    ports:
-    - 8100:8100
-    networks:
-      - datalogger_net
-    depends_on:
-      - srvwildfly
-      
+  
   srvdb:
     image: postgres
     container_name: srvdb
@@ -30,7 +17,6 @@ services:
       - datalogger_net
     volumes:
       - pg_data2:/var/lib/postgresql/data
-
 
   srvwildfly:
     image: ups/appdocker
@@ -48,6 +34,41 @@ services:
       - srvdb
     networks:
       - datalogger_net
+      
+  swaggerui:
+    depends_on:
+      - srvwildfly
+    image: swaggerapi/swagger-ui
+    ports:
+      - 8888:8080
+      
+  swaggereditor:
+    depends_on:
+      - srvwildfly
+    image: swaggerapi/swagger-editor
+    ports:
+      - 9999:8080
+      
+  jaegertracingio:
+    depends_on:
+      - srvwildfly
+    image: jaegertracing/all-in-one:1.16.0
+    ports:
+      - 6831:6831/udp
+      - 16686:16686
+
+  frontend:
+    image: frontend
+    container_name: frontend
+    hostname: frontend
+    environment:
+      TZ: America/Guayaquil
+    ports:
+    - 8100:8100
+    networks:
+      - datalogger_net
+    depends_on:
+      - srvwildfly
 
   admin:
     image: dpage/pgadmin4
