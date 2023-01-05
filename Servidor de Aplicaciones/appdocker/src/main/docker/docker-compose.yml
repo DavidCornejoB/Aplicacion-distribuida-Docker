@@ -41,6 +41,8 @@ services:
     image: swaggerapi/swagger-ui
     ports:
       - 8888:8080
+    networks:
+      - datalogger_net
       
   swaggereditor:
     depends_on:
@@ -48,6 +50,8 @@ services:
     image: swaggerapi/swagger-editor
     ports:
       - 9999:8080
+    networks:
+      - datalogger_net
       
   jaegertracingio:
     depends_on:
@@ -56,6 +60,8 @@ services:
     ports:
       - 6831:6831/udp
       - 16686:16686
+    networks:
+      - datalogger_net
 
   frontend:
     image: frontend
