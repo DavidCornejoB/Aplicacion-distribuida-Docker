@@ -48,7 +48,7 @@ public class Service {
 	@Counted(description = "Crear Vehiculo", absolute = true)
 	@Timed(name = "saludo2-time", description = "Tiempo de procesamiento de saludo 2", unit = MetricUnits.MILLISECONDS, absolute = true)
 	@Operation(description = "Invocar a endpoint HelloWorld con respuesta en JSON", summary = "call getHelloWorldJSON")
-	@APIResponse(responseCode = "200", description = "Saludo respuesta crear",
+	@APIResponse(responseCode = "400", description = "Saludo respuesta crear",
 				content = @Content(mediaType = MediaType.APPLICATION_JSON,
 					schema = @Schema(implementation = String.class)))
 	public boolean createVehiculo(@FormParam("matricula") String matricula, @FormParam("marca") String marca,
@@ -70,7 +70,7 @@ public class Service {
 	@Counted(description = "Eliminar Vehiculo", absolute = true)
 	@Timed(name = "saludo3-time", description = "Tiempo de procesamiento de saludo 3", unit = MetricUnits.MILLISECONDS, absolute = true)
 	@Operation(description = "Invocar a endpoint HelloWorld con respuesta en JSON", summary = "call getHelloWorldJSON")
-	@APIResponse(responseCode = "200", description = "Saludo respuesta eliminar",
+	@APIResponse(responseCode = "400", description = "Saludo respuesta eliminar",
 				content = @Content(mediaType = MediaType.APPLICATION_JSON,
 					schema = @Schema(implementation = String.class)))
 	public boolean deleteVehiculo(@FormParam("matricula") String matricula){
